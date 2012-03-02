@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators", "Combinators.csproj", "{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators", "Combinators\Combinators.csproj", "{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators.Test", "..\Combinators.Test\Combinators.Test.csproj", "{38305511-5783-442C-8995-9E2833ACD4B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators.Test", "Combinators.Test\Combinators.Test.csproj", "{38305511-5783-442C-8995-9E2833ACD4B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB3BE051-FE5E-4A6C-AA3B-7D256DFBD42B}"
 	ProjectSection(SolutionItems) = preProject
