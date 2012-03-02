@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators", "Combinators.csproj", "{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators.Test", "..\Combinators.Test\Combinators.Test.csproj", "{38305511-5783-442C-8995-9E2833ACD4B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB3BE051-FE5E-4A6C-AA3B-7D256DFBD42B}"
+	ProjectSection(SolutionItems) = preProject
+		Combinators.vsmdi = Combinators.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Combinators.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A62A8BB-B90F-4B7A-887F-969A5D37D63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38305511-5783-442C-8995-9E2833ACD4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38305511-5783-442C-8995-9E2833ACD4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38305511-5783-442C-8995-9E2833ACD4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38305511-5783-442C-8995-9E2833ACD4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
