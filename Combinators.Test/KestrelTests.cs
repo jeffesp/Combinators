@@ -1,72 +1,61 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Combinators;
-using System.Diagnostics;
-using System.Dynamic;
+using Xunit;
 
 namespace Combinators.Test
 {
-    [TestClass]
     public class KestrelTests
     {
-        [TestMethod]
-        public void tap_with_action_test_gives_back_initial_object()
+        [Fact]
+        public void tap_with_action_gives_back_initial_object()
         {
             var x = new Dictionary<string, object>();
             x["Foo"] = 1;
             x["Bar"] = 2;
             var result = x.Tap((item) => { 
-                Debug.WriteLine("Foo: {0}, Bar: {1}", item["Foo"], item["Bar"]);
+                int sum = (int)item["Foo"] + (int)item["Bar"];
             });
 
-            Assert.AreSame(x, result);
-            Assert.AreEqual(1, result["Foo"]);
-            Assert.AreEqual(2, result["Bar"]);
+            Assert.Same(x, result);
+            Assert.Equal(1, result["Foo"]);
+            Assert.Equal(2, result["Bar"]);
         }
 
-        [TestMethod]
-        public void tap_with_func_test_gives_back_modified_object_same_reference()
+        [Fact]
+        public void tap_with_func_gives_back_modified_object_same_reference()
         {
             var x = new Dictionary<string, object>();
             x["Foo"] = 1;
             x["Bar"] = 2;
             var result = x.Tap((item) => { 
-                Debug.WriteLine("Foo: {0}, Bar: {1}", item["Foo"], item["Bar"]);
                 item["Foo"] = 12;
                 item["Bar"] = 13;
-                Debug.WriteLine("Foo: {0}, Bar: {1}", item["Foo"], item["Bar"]);
                 return item;
             });
 
-            Assert.AreSame(x, result);
-            Assert.AreEqual(12, result["Foo"]);
-            Assert.AreEqual(13, result["Bar"]);
-            Assert.AreEqual(12, x["Foo"]);
-            Assert.AreEqual(13, x["Bar"]);
+            Assert.Same(x, result);
+            Assert.Equal(12, result["Foo"]);
+            Assert.Equal(13, result["Bar"]);
+            Assert.Equal(12, x["Foo"]);
+            Assert.Equal(13, x["Bar"]);
 
         }
 
-        [TestMethod]
+        [Fact]
         public void tap_with_func_gives_back_modified_primitive_not_same_reference()
         {
-
             var x = 5;
             var result = x.Tap((item) => {
-                Debug.WriteLine(item);
                 item = 7;
-                Debug.WriteLine(item);
                 return item;
             });
 
-            Assert.AreNotSame(x, result);
-            Assert.AreEqual(5, x);
-            Assert.AreEqual(7, result);
+            Assert.NotSame(x, result);
+            Assert.Equal(5, x);
+            Assert.Equal(7, result);
         }
 
-        [TestMethod]
+        [Fact]
         public void noop_with_action_no_arguments_does_not_call_action()
         {
             int bob = 0;
@@ -76,10 +65,10 @@ namespace Combinators.Test
                 bob = 10;
             });
 
-            Assert.AreEqual(0, bob);
+            Assert.Equal(0, bob);
         }
 
-        [TestMethod]
+        [Fact]
         public void noop_with_action_argument_does_not_call_action()
         {
             int bob = 0;
@@ -91,8 +80,8 @@ namespace Combinators.Test
                 bob = 10;
             });
 
-            Assert.AreEqual(0, bob);
-            Assert.AreEqual(4, result);
+            Assert.Equal(0, bob);
+            Assert.Equal(4, result);
         }
     }
 }

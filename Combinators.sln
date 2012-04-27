@@ -5,13 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators", "Combinators\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combinators.Test", "Combinators.Test\Combinators.Test.csproj", "{38305511-5783-442C-8995-9E2833ACD4B6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB3BE051-FE5E-4A6C-AA3B-7D256DFBD42B}"
-	ProjectSection(SolutionItems) = preProject
-		Combinators.vsmdi = Combinators.vsmdi
-		Local.testsettings = Local.testsettings
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Combinators.vsmdi
